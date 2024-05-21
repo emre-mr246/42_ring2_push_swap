@@ -6,12 +6,12 @@
 #    By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/11 07:09:36 by emgul             #+#    #+#              #
-#    Updated: 2024/05/09 14:51:39 by emgul            ###   ########.fr        #
+#    Updated: 2024/05/21 17:11:23 by emgul            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-FILES			=	checker	\
-					utils
+FILES			=	checker_bonus	\
+					utils_bonus
 
 NAME			=	checker
 CC				=	gcc
