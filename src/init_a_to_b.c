@@ -6,7 +6,7 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 13:15:33 by emgul             #+#    #+#             */
-/*   Updated: 2024/05/04 16:30:28 by emgul            ###   ########.fr       */
+/*   Updated: 2024/05/21 20:08:51 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ void	set_targets(t_stack_node *node_a, t_stack_node *node_b)
 {
 	t_stack_node	*pointer_b;
 	t_stack_node	*target_node;
-	int				closest_smaller_nbr;
+	long			closest_smaller_nbr;
 
 	while (node_a)
 	{
-		closest_smaller_nbr = INT_MIN;
+		closest_smaller_nbr = LONG_MIN;
 		pointer_b = node_b;
 		while (pointer_b)
 		{
@@ -33,7 +33,7 @@ void	set_targets(t_stack_node *node_a, t_stack_node *node_b)
 			}
 			pointer_b = pointer_b->next;
 		}
-		if (closest_smaller_nbr == INT_MIN)
+		if (closest_smaller_nbr == LONG_MIN)
 			node_a->target_node = find_biggest_node(node_b);
 		else
 			node_a->target_node = target_node;
@@ -64,11 +64,11 @@ void	calculate_costs(t_stack_node *node_a, t_stack_node *node_b)
 t_stack_node	*get_cheapest_node(t_stack_node *node_a, t_stack_node *node_b)
 {
 	t_stack_node	*cheapest_node;
-	int				cheapest_value;
+	long			cheapest_value;
 
 	if (!node_a)
 		return (NULL);
-	cheapest_value = INT_MAX;
+	cheapest_value = LONG_MAX;
 	calculate_costs(node_a, node_b);
 	while (node_a)
 	{

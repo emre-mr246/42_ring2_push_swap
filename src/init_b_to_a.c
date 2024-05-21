@@ -6,7 +6,7 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 18:35:38 by emgul             #+#    #+#             */
-/*   Updated: 2024/04/30 19:18:57 by emgul            ###   ########.fr       */
+/*   Updated: 2024/05/21 19:57:00 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ void	set_target_b(t_stack_node *node_a, t_stack_node *node_b)
 {
 	t_stack_node	*pointer_a;
 	t_stack_node	*target_node;
-	int				closest_bigger_nbr;
+	long			closest_bigger_nbr;
 
 	while (node_b)
 	{
-		closest_bigger_nbr = INT_MAX;
+		closest_bigger_nbr = LONG_MAX;
 		pointer_a = node_a;
 		while (pointer_a)
 		{
@@ -39,7 +39,7 @@ void	set_target_b(t_stack_node *node_a, t_stack_node *node_b)
 			}
 			pointer_a = pointer_a->next;
 		}
-		if (closest_bigger_nbr == INT_MAX)
+		if (closest_bigger_nbr == LONG_MAX)
 			node_b->target_node = find_lowest_node(node_a);
 		else
 			node_b->target_node = target_node;

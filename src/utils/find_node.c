@@ -6,7 +6,7 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 18:49:00 by emgul             #+#    #+#             */
-/*   Updated: 2024/05/04 16:32:18 by emgul            ###   ########.fr       */
+/*   Updated: 2024/05/21 20:00:03 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ t_stack_node	*find_last_node(t_stack_node *node)
 t_stack_node	*find_biggest_node(t_stack_node *node)
 {
 	t_stack_node	*biggest_node;
-	int				biggest_value;
+	long			biggest_value;
 
 	if (!node)
 		return (NULL);
-	biggest_value = INT_MIN;
+	biggest_value = LONG_MIN;
 	while (node)
 	{
 		if (node->nbr > biggest_value)
@@ -45,11 +45,11 @@ t_stack_node	*find_biggest_node(t_stack_node *node)
 t_stack_node	*find_lowest_node(t_stack_node *node)
 {
 	t_stack_node	*lowest_node;
-	int				lowest_value;
+	long			lowest_value;
 
 	if (!node)
 		return (NULL);
-	lowest_value = INT_MAX;
+	lowest_value = LONG_MAX;
 	while (node)
 	{
 		if (node->nbr < lowest_value)

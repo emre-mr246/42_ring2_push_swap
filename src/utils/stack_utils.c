@@ -6,7 +6,7 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 12:48:29 by emgul             #+#    #+#             */
-/*   Updated: 2024/05/11 15:36:33 by emgul            ###   ########.fr       */
+/*   Updated: 2024/05/21 20:00:57 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void	set_index_and_median(t_stack_node *node)
 t_stack_node	*init_stack_a(char **input)
 {
 	t_stack_node	*stack_a;
-	long			nbr;
+	int				nbr;
 
 	stack_a = NULL;
 	while (*input)
