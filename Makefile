@@ -6,7 +6,7 @@
 #    By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/11 07:09:36 by emgul             #+#    #+#              #
-#    Updated: 2024/05/21 17:19:46 by emgul            ###   ########.fr        #
+#    Updated: 2024/05/22 11:53:34 by emgul            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ AR_NAME			=	push_swap.a
 
 CC				=	gcc
 CFLAGS			=	-Wall -Wextra -Werror -I $(LIBFT_PATH) 
+MFLAGS			=	-s -j16 -C
 AR				=	ar rcs
 RM				=	rm -rf
 
@@ -53,30 +54,30 @@ $(NAME): $(LIBFT) $(OBJS)
 	@echo "$(GREEN)-== $(NAME) created! ==-$(DEFAULT)"
 
 $(LIBFT):
-	@make -s -C $(LIBFT_PATH)
+	@make $(MFLAGS) $(LIBFT_PATH)
 
 $(AR_NAME): $(LIBFT) $(OBJS) 
 	@$(AR) $(AR_NAME) $(OBJS)
 
 bonus:	$(AR_NAME)
-	@make -s -C $(CHECKER_PATH)
+	@make $(MFLAGS) $(CHECKER_PATH)
 
 all: $(NAME)
 	
 clean:
 	@$(RM) $(OBJS)
-	@make -s -C $(CHECKER_PATH) clean
+	@make $(MFLAGS) $(CHECKER_PATH) clean
 	@echo "$(YELLOW)-== all created object files deleted! -==$(DEFAULT)"
 
 fclean: clean libclean
 	@$(RM) $(NAME)
 	@$(RM) $(AR_NAME)
-	@make -s -C $(CHECKER_PATH) fclean
+	@make $(MFLAGS) $(CHECKER_PATH) fclean
 	@echo "$(RED)-== all created files deleted! -==$(DEFAULT)"
 
 libclean:
-	@make -s -C $(LIBFT_PATH) fclean
-	@make -s -C $(CHECKER_PATH) fclean
+	@make $(MFLAGS) $(LIBFT_PATH) fclean
+	@make $(MFLAGS) $(CHECKER_PATH) fclean
 	@echo "$(BLUE)-== all created files deleted in libraries! -==$(DEFAULT)"
 
 re: fclean all

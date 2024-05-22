@@ -6,7 +6,7 @@
 #    By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/07 09:44:14 by emgul             #+#    #+#              #
-#    Updated: 2024/05/21 16:54:28 by emgul            ###   ########.fr        #
+#    Updated: 2024/05/22 11:56:03 by emgul            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,20 +64,20 @@ FILES	=	ft_atoi \
 		printf/ft_putunsigned
 		
 NAME	=	libft.a
-CC	=	gcc
+CC	=		gcc
 CFLAGS	=	-Wall -Wextra -Werror
-AR	=	ar rcs
-RM	=	rm -f
+AR	=		ar rcs
+RM	=		rm -f
 
 SRCS	=	$(addsuffix .c, $(FILES))
-OBJS =	$(OBJS_PATH)$(addsuffix .o, $(FILES))
+OBJS =		$(OBJS_PATH)$(addsuffix .o, $(FILES))
 
 .c.o: $(SRCS)
 	@$(CC) $(CFLAGS) -c $< -o $@ 
 
 $(NAME): $(OBJS)
 	@$(AR) $@ $^
-	@make clean
+	@make -s clean
 
 all: $(NAME)
 

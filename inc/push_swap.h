@@ -6,7 +6,7 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 14:57:24 by emgul             #+#    #+#             */
-/*   Updated: 2024/05/11 15:25:11 by emgul            ###   ########.fr       */
+/*   Updated: 2024/05/22 12:06:30 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ long					ft_atol(const char *str);
 char					**parse_input(int argc, char **argv);
 int						get_argv_len(char **argv);
 char					**create_input(int argc, char **argv);
-int						char_ptrlen(char **input);
+int						str_arr_size(char **input);
 
 // STACK UTILS
 int						get_stack_len(t_stack_node *node);

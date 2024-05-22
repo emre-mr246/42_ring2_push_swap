@@ -6,7 +6,7 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 17:07:24 by emgul             #+#    #+#             */
-/*   Updated: 2024/05/11 15:36:24 by emgul            ###   ########.fr       */
+/*   Updated: 2024/05/22 12:10:01 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,14 @@ int	check_input(char **input)
 	return (0);
 }
 
+/**
+ * @brief Checks the syntax of a given string
+ *  to determine if it represents a valid integer.
+ *
+ * @param str The string to be checked.
+ * @return 1 if the string is a valid integer,
+ *  0 if the string is empty or NULL, -1 if the string has invalid syntax.
+ */
 int	check_syntax(char *str)
 {
 	if (!str || !*str)
@@ -76,6 +84,14 @@ void	check_duplicate(t_stack_node **stack_a)
 	}
 }
 
+/**
+ * @brief Whether the input is a single piece or multiple pieces,
+ *  it splits them into arguments.
+ *
+ * @param argc The number of arguments.
+ * @param argv The arguments to be passed to the program.
+ * @return A list of arguments separated by spaces.
+ */
 char	**parse_input(int argc, char **argv)
 {
 	char	**result;
@@ -105,6 +121,14 @@ char	**parse_input(int argc, char **argv)
 	return (result);
 }
 
+/**
+ * @brief Creates a list of arguments from the input,
+ *  processes them, and checks their syntax.
+ *
+ * @param argc The number of arguments.
+ * @param argv The arguments to be passed to the program.
+ * @return A list of arguments, processed and checked for syntax errors.
+ */
 char	**create_input(int argc, char **argv)
 {
 	char	**input;
@@ -117,7 +141,7 @@ char	**create_input(int argc, char **argv)
 	if (!input)
 		exit_with_error("error while creating input!\n");
 	if (argc == 1)
-		argc = char_ptrlen(input);
+		argc = str_arr_size(input);
 	i = 0;
 	while (argc)
 	{

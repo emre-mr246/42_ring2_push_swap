@@ -6,12 +6,17 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 14:56:43 by emgul             #+#    #+#             */
-/*   Updated: 2024/05/21 20:07:24 by emgul            ###   ########.fr       */
+/*   Updated: 2024/05/22 12:14:17 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 #include "../lib/libft/libft.h"
+
+// void __attribute__ ((destructor)) a()
+// {
+// 	system("leaks push_swap");
+// }
 
 int	main(int argc, char **argv)
 {

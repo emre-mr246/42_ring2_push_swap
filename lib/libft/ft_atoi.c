@@ -13,7 +13,8 @@
 /*
  * @brief Converts a string to an integer.
  *
- * @param str The string to convert, which may include optional whitespace and a sign.
+ * @param str The string to convert,
+ * which may include optional whitespace and a sign.
  * @return The integer representation of the string.
  */
 int	ft_atoi(const char *str)

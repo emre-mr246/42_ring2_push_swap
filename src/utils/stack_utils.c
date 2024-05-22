@@ -6,7 +6,7 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 12:48:29 by emgul             #+#    #+#             */
-/*   Updated: 2024/05/21 20:00:57 by emgul            ###   ########.fr       */
+/*   Updated: 2024/05/22 12:16:31 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,10 +87,18 @@ void	set_index_and_median(t_stack_node *node)
 	}
 }
 
+/**
+ * @brief Initializes stack A with integers parsed from input strings.
+ *
+ * @param input Array of strings representing integers
+ *  to initialize the stack with.
+ * @return A pointer to the head of the initialized stack A,
+ *  or NULL if an error occurs.
+ */
 t_stack_node	*init_stack_a(char **input)
 {
 	t_stack_node	*stack_a;
-	int				nbr;
+	long			nbr;
 
 	stack_a = NULL;
 	while (*input)
